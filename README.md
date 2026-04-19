@@ -50,288 +50,288 @@ USE health_insurance;
 
 #### BENEFITS COST SHARING
 
-CREATE EXTERNAL TABLE health_insurance.benefits_cost_sharing (
+`CREATE EXTERNAL TABLE health_insurance.benefits_cost_sharing (`
 
-    BenefitName STRING,
+`    BenefitName STRING,`
 
-    BusinessYear INT,
+`    BusinessYear INT,`
 
-    CoinsInnTier1 STRING,
+`    CoinsInnTier1 STRING,`
 
-    CoinsInnTier2 STRING,
+`    CoinsInnTier2 STRING,`
 
-    CoinsOutofNet STRING,
+`    CoinsOutofNet STRING,`
 
-    CopayInnTier1 STRING,
+`    CopayInnTier1 STRING,`
 
-    CopayInnTier2 STRING,
+`    CopayInnTier2 STRING,`
 
-    CopayOutofNet STRING,
+`    CopayOutofNet STRING,`
 
-    EHBVarReason STRING,
+`    EHBVarReason STRING,`
 
-    Exclusions STRING,
+`    Exclusions STRING,`
 
-    Explanation STRING,
+`    Explanation STRING,`
 
-    ImportDate STRING,
+`    ImportDate STRING,`
 
-    IsCovered STRING,
+`    IsCovered STRING,`
 
-    IsEHB STRING,
+`    IsEHB STRING,`
 
-    IsExclFromInnMOOP STRING,
+`    IsExclFromInnMOOP STRING,`
 
-    IsExclFromOonMOOP STRING,
+`    IsExclFromOonMOOP STRING,`
 
-    IsStateMandate STRING,
+`    IsStateMandate STRING,`
 
-    IsSubjToDedTier1 STRING,
+`    IsSubjToDedTier1 STRING,`
 
-    IsSubjToDedTier2 STRING,
+`    IsSubjToDedTier2 STRING,`
 
-    IssuerId INT,
+`    IssuerId INT,`
 
-    IssuerId2 INT,
+`    IssuerId2 INT,`
 
-    LimitQty DOUBLE,
+`    LimitQty DOUBLE,`
 
-    LimitUnit STRING,
+`    LimitUnit STRING,`
 
-    MinimumStay DOUBLE,
+`    MinimumStay DOUBLE,`
 
-    PlanId STRING,
+`    PlanId STRING,`
 
-    QuantLimitOnSvc STRING,
+`    QuantLimitOnSvc STRING,`
 
-    RowNumber INT,
+`    RowNumber INT,`
 
-    SourceName STRING,
+`    SourceName STRING,`
 
-    StandardComponentId STRING,
+`    StandardComponentId STRING,`
 
-    StateCode STRING,
+`    StateCode STRING,`
 
-    StateCode2 STRING,
+`    StateCode2 STRING,`
 
-    VersionNum DOUBLE
+`    VersionNum DOUBLE`
 
-)
+`)`
 
-ROW FORMAT DELIMITED
+`ROW FORMAT DELIMITED`
 
-FIELDS TERMINATED BY ','
+`FIELDS TERMINATED BY ','`
 
-STORED AS TEXTFILE
+`STORED AS TEXTFILE`
 
-LOCATION '/user/458project/data/BenefitsCostSharing'
+`LOCATION '/user/458project/data/BenefitsCostSharing'`
 
-TBLPROPERTIES ("skip.header.line.count"="1");
+`TBLPROPERTIES ("skip.header.line.count"="1");`
 
 #### BUSINESS RULES
 
-CREATE EXTERNAL TABLE health_[insurance.business](http://insurance.business)_rules (
+`CREATE EXTERNAL TABLE health_insurance.business_rules (`
 
-    BusinessYear INT,
+`    BusinessYear INT,`
 
-    StateCode STRING,
+`    StateCode STRING,`
 
-    IssuerId INT,
+`    IssuerId INT,`
 
-    IssuerId2 INT,
+`    IssuerId2 INT,`
 
-    SourceName STRING,
+`    SourceName STRING,`
 
-    VersionNum DOUBLE,
+`    VersionNum DOUBLE,`
 
-    ImportDate STRING,
+`    ImportDate STRING,`
 
-    TIN STRING,
+`    TIN STRING,`
 
-    ProductId STRING,
+`    ProductId STRING,`
 
-    StandardComponentId STRING,
+`    StandardComponentId STRING,`
 
-    EnrolleeContractRateDeterminationRule STRING,
+`    EnrolleeContractRateDeterminationRule STRING,`
 
-    TwoParentFamilyMaxDependentsRule STRING,
+`    TwoParentFamilyMaxDependentsRule STRING,`
 
-    SingleParentFamilyMaxDependentsRule STRING,
+`    SingleParentFamilyMaxDependentsRule STRING,`
 
-    DependentMaximumAgRule STRING,
+`    DependentMaximumAgRule STRING,`
 
-    ChildrenOnlyContractMaxChildrenRule STRING,
+`    ChildrenOnlyContractMaxChildrenRule STRING,`
 
-    DomesticPartnerAsSpouseIndicator STRING,
+`    DomesticPartnerAsSpouseIndicator STRING,`
 
-    SameSexPartnerAsSpouseIndicator STRING,
+`    SameSexPartnerAsSpouseIndicator STRING,`
 
-    AgeDeterminationRule STRING,
+`    AgeDeterminationRule STRING,`
 
-    MinimumTobaccoFreeMonthsRule STRING,
+`    MinimumTobaccoFreeMonthsRule STRING,`
 
-    CohabitationRule STRING,
+`    CohabitationRule STRING,`
 
-    RowNumber INT,
+`    RowNumber INT,`
 
-    MarketCoverage STRING,
+`    MarketCoverage STRING,`
 
-    DentalOnlyPlan STRING
+`    DentalOnlyPlan STRING`
 
-)
+`)`
 
-ROW FORMAT DELIMITED
+`ROW FORMAT DELIMITED`
 
-FIELDS TERMINATED BY ','
+`FIELDS TERMINATED BY ','`
 
-STORED AS TEXTFILE
+`STORED AS TEXTFILE`
 
-LOCATION '/user/458project/data/BusinessRules'
+`LOCATION '/user/458project/data/BusinessRules'`
 
-TBLPROPERTIES ("skip.header.line.count"="1");
+`TBLPROPERTIES ("skip.header.line.count"="1");`
 
 #### NETWORK
 
-CREATE EXTERNAL TABLE health_[insurance.network](http://insurance.network) (
+`CREATE EXTERNAL TABLE health_insurance.network (`
 
-    BusinessYear INT,
+`    BusinessYear INT,`
 
-    StateCode STRING,
+`    StateCode STRING,`
 
-    IssuerId INT,
+`    IssuerId INT,`
 
-    SourceName STRING,
+`    SourceName STRING,`
 
-    VersionNum DOUBLE,
+`    VersionNum DOUBLE,`
 
-    ImportDate STRING,
+`    ImportDate STRING,`
 
-    IssuerId2 INT,
+`    IssuerId2 INT,`
 
-    StateCode2 STRING,
+`    StateCode2 STRING,`
 
-    NetworkName STRING,
+`    NetworkName STRING,`
 
-    NetworkId STRING,
+`    NetworkId STRING,`
 
-    NetworkURL STRING,
+`    NetworkURL STRING,`
 
-    RowNumber INT,
+`    RowNumber INT,`
 
-    MarketCoverage STRING,
+`    MarketCoverage STRING,`
 
-    DentalOnlyPlan STRING
+`    DentalOnlyPlan STRING`
 
-)
+`)`
 
-ROW FORMAT DELIMITED
+`ROW FORMAT DELIMITED`
 
-FIELDS TERMINATED BY ','
+`FIELDS TERMINATED BY ','`
 
-STORED AS TEXTFILE
+`STORED AS TEXTFILE`
 
-LOCATION '/user/458project/data/Network'
+`LOCATION '/user/458project/data/Network'`
 
-TBLPROPERTIES ("skip.header.line.count"="1");
+`TBLPROPERTIES ("skip.header.line.count"="1");`
 
 #### RATE
 
-CREATE TABLE health_insurance.rate (
+`CREATE TABLE health_insurance.rate (`
 
-  BusinessYear INT,
+`  BusinessYear INT,`
 
-  StateCode STRING,
+`  StateCode STRING,`
 
-  IssuerId INT,
+`  IssuerId INT,`
 
-  SourceName STRING,
+`  SourceName STRING,`
 
-  VersionNum INT,
+`  VersionNum INT,`
 
-  ImportDate STRING,
+`  ImportDate STRING,`
 
-  IssuerId2 INT,
+`  IssuerId2 INT,`
 
-  FederalTIN STRING,
+`  FederalTIN STRING,`
 
-  RateEffectiveDate STRING,
+`  RateEffectiveDate STRING,`
 
-  RateExpirationDate STRING,
+`  RateExpirationDate STRING,`
 
-  PlanId STRING,
+`  PlanId STRING,`
 
-  RatingAreaId STRING,
+`  RatingAreaId STRING,`
 
-  Tobacco STRING,
+`  Tobacco STRING,`
 
-  Age STRING,
+`  Age STRING,`
 
-  IndividualRate DOUBLE,
+`  IndividualRate DOUBLE,`
 
-  IndividualTobaccoRate DOUBLE,
+`  IndividualTobaccoRate DOUBLE,`
 
-  Couple DOUBLE,
+`  Couple DOUBLE,`
 
-  PrimarySubscriberAndOneDependent DOUBLE,
+`  PrimarySubscriberAndOneDependent DOUBLE,`
 
-  PrimarySubscriberAndTwoDependents DOUBLE,
+`  PrimarySubscriberAndTwoDependents DOUBLE,`
 
-  PrimarySubscriberAndThreeOrMoreDependents DOUBLE,
+`  PrimarySubscriberAndThreeOrMoreDependents DOUBLE,`
 
-  CoupleAndOneDependent DOUBLE,
+`  CoupleAndOneDependent DOUBLE,`
 
-  CoupleAndTwoDependents DOUBLE,
+`  CoupleAndTwoDependents DOUBLE,`
 
-  CoupleAndThreeOrMoreDependents DOUBLE,
+`  CoupleAndThreeOrMoreDependents DOUBLE,`
 
-  RowNumber INT
+`  RowNumber INT`
 
-)
+`)`
 
-ROW FORMAT DELIMITED
+`ROW FORMAT DELIMITED`
 
-FIELDS TERMINATED BY ','
+`FIELDS TERMINATED BY ','`
 
-STORED AS TEXTFILE
+`STORED AS TEXTFILE`
 
-LOCATION '/user/458project/data/Rate'
+`LOCATION '/user/458project/data/Rate'`
 
-TBLPROPERTIES ("skip.header.line.count"="1");
+`TBLPROPERTIES ("skip.header.line.count"="1");`
 
 #### SERVICE AREA
 
-CREATE TABLE health_insurance.service_area (
+`CREATE TABLE health_insurance.service_area (`
 
-  BusinessYear INT,
+`  BusinessYear INT,`
 
-  StateCode STRING,
+`  StateCode STRING,`
 
-  IssuerId INT,
+`  IssuerId INT,`
 
-  SourceName STRING,
+`  SourceName STRING,`
 
-  VersionNum INT,
+`  VersionNum INT,`
 
-  ImportDate STRING,
+`  ImportDate STRING,`
 
-  IssuerId2 INT,
+`  IssuerId2 INT,`
 
-  StateCode2 STRING,
+`  StateCode2 STRING,`
 
-  ServiceAreaId STRING,
+`  ServiceAreaId STRING,`
 
-  ServiceAreaName STRING
+`  ServiceAreaName STRING`
 
-)
+`)`
 
-ROW FORMAT DELIMITED
+`ROW FORMAT DELIMITED`
 
-FIELDS TERMINATED BY ','
+`FIELDS TERMINATED BY ','`
 
-STORED AS TEXTFILE
+`STORED AS TEXTFILE`
 
-LOCATION '/user/458project/data/ServiceArea/'
+`LOCATION '/user/458project/data/ServiceArea/'`
 
-TBLPROPERTIES ("skip.header.line.count"="1");
+`TBLPROPERTIES ("skip.header.line.count"="1");`
 
-#### 
+## Step 3 — HIVE
