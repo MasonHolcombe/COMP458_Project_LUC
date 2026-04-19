@@ -334,4 +334,6 @@ USE health_insurance;
 
 `TBLPROPERTIES ("skip.header.line.count"="1");`
 
-## Step 3 — HIVE
+## Step 3 — Analysis
+
+Run queries on this data from the HUE dashboard.
